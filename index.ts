@@ -24,7 +24,7 @@ app.get('/', async (req: Request, res: Response) => {
   try{
     const users = await main()
     res.json({
-      msg: 'Hello World!',
+      message: 'Hello World!',
       data: users
     })
   }
