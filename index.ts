@@ -28,7 +28,9 @@ app.get('/', async (req: Request, res: Response) => {
       data: users
     })
   }
-  catch(e ){
+  catch(e: any){
+    console.log(e)
+    res.send('error', e?.message)
     await prisma.$disconnect()
   }
 })
