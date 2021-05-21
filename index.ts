@@ -30,7 +30,7 @@ app.get('/', async (req: Request, res: Response) => {
   }
   catch(e: any){
     console.log(e)
-    res.send('error', e?.message)
+    res.send('error' + e?.message)
     await prisma.$disconnect()
   }
 })
