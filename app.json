@@ -1,7 +1,14 @@
 {
-  "addons": [
-    {
-      "plan": "heroku-postgresql:hobby-dev"
+  "environments": {
+    "review": {
+      "env": {
+        "SECRET_TOKEN": "test-secret"
+      },
+      "addons": [
+        {
+          "plan": "heroku-postgresql:hobby-dev"
+        }
+      ]
     }
-  ]
+  }
 }
