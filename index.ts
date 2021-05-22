@@ -7,7 +7,7 @@ async function main() {
   await prisma.user.deleteMany({})
   await prisma.user.create({
     data: {
-      email: `example${new Date().toISOString()}@email.com`
+      email: `example-${new Date().toISOString()}@email.com`
     }
   })
   const allUsers = await prisma.user.findMany()
